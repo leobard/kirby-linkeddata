@@ -98,11 +98,21 @@ All major search engines read linked data and use it in their search results. Mo
 
 This plugin creates data that is good for Search Engine Optimization (SEO) and AI Optimization.
 
-## When should I use "Kirby-SEO" and when "kirby LinkedData"?
+## When should I use "Kirby-SEO" and when "Kirby LinkedData"?
 
 [Kirby SEO by Tobias Möritz](https://plugins.getkirby.com/tobimori/seo) is an all-in-one toolkit for implementing SEO & Meta best practices in your Kirby site. Use it to get a customizable, turnkey SEO solution in seconds.
+- use it for production sites
+- use it when you don't have blueprints
+- use it for sitemap
 
 [Kirby LinkedData for SEO](https://github.com/leobard/kirby-linkeddata) to maps fields from your pages (blueprints) to schema.org or any other RDF-based markup. As the mappings are part of the definitions in the blueprints, they add semantic meaning to your fields for interoperability with other systems. Like the `help` property of a field suggested by Kirby for documentation, the `rdfproperty` points to a documentation of the field based on W3C Standards. This plugin adds a mapping. Once defined, this mapping can be reused for importing data, instructing AI systems to write code for importing from external sources and do all kinds of useful things we can think of. It opens the door to hacking more features on top.
+- use it when you want to experiment with the idea of linked data
+- use it when you want to map fields and classes declaratively in your blueprints
+- use it when you want minimal code and dependencies
+- use it when you are ok with an early alpha version
+
+> [!TIP]
+> You can use both plugins in parallel. Just know what you are doing: the OpenGraph data, Title-Data, sitemap are great from "Kirby SEO". The JSON-LD for schema.org may be nicer for you with "Kirby LinkedData for SEO".
 
 ## Why is this called "LinkedData" and "SEO"?
 
