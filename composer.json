@@ -1,0 +1,11 @@
+{
+    "name": "leobard/kirby-linkeddata",
+    "description": "Kirby LinkedData for SEO",
+    "version": "0.0.1",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Leo \"Leobard\" Sauermann"
+        }
+    ]
+}
