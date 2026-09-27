@@ -1,13 +1,18 @@
 # Kirby LinkedData for SEO
 
-Do you want to give search engines and AIs they data they need to find you with minimal effort?
+Do you want to give search engines and AIs the data they need with minimal effort?
 
 Kirby LinkedData for SEO is a plugin that maps fields from your pages (blueprints) to schema.org or any other RDF-based markup. 
 - It prints the data as JSON-LD block in a snippet. 
 - Search engines, AIs, and human readers can pick it up from there and use it.
-- Fields are mapped to equivalent RDF properties, blueprints to their RDF class. 
+- Fields are mapped to equivalent RDF properties, blueprints to their RDF class. (🆑)
 - Use the AI skill "schema that blueprint" to get started. 
 - Complex mappings can be done in PHP code. 
+
+> [!CAUTION]
+> This plugin is in an alpha state. It has not been used productively. It misses some useful features, see [issues](https://github.com/leobard/kirby-linkeddata/issues).
+
+(🆑 not yet, see [issue#1: Support RDF namespaces](https://github.com/leobard/kirby-linkeddata/issues/1))
 
 # Getting started
 
@@ -124,7 +129,7 @@ The [Resource Description Framework](https://en.wikipedia.org/wiki/Resource_Desc
 
 If you are working in any of above fields and are interested to get all these great things running in your Kirby site, get in touch with the RDF/ LinkedData/ SemanticWeb community. Leobard is having fun there since 2003 and may be able to connect you to others.
 
-# What is the URI / ID used in the RDF statements? By what do we identify the real world thing in comparison to the web page?
+## What is the URI / ID used in the RDF statements? By what do we identify the real world thing in comparison to the web page?
 kirby-linkeddata uses by default the `$page->url()` for identifying the resource. This is simple and in practice it "**just works (tm)**".
 
 The RDF resource id from the starterkit example is `https://www.example.com/about`.
@@ -138,6 +143,15 @@ The **URLs of this plugin are currently in a state defined as uncool according t
 In the starterkit example, the **example.org/about** page describing Mægazine Inc in HTML **should** have a different URL that the identifier used in the RDF Resource representation, in the `@id` of the JSON-LD. Then it would qualify as **cool** based on the IG note I have published in 2008. But I don't know yet how I should mint the resource URIs yet. Add a suffix? Add a parameter like activitypub does? I need to think this through. Then I would need to implement a redirect pointing from the resource-URI to the document-URI. This probably needs some feedback from others. 
 
 If you want to help this plugin to reach the level of coolness I defined as W3C, you are highly welcome. Demand coolness and start a ticket. Suggest a cool URL scheme. **Together, we can make this cool**.
+
+See [issue#4: Make the URLs cool, implement content-negotiation](https://github.com/leobard/kirby-linkeddata/issues/4)
+
+# Development
+
+## Representation of RDF in PHP: JSON-LD as array
+This plugin intentionally currently uses a minimalistic RDF representation: the RDF graph is represented using a PHP `array` object that is later converted to JSON-LD using `json_encode()`. 
+
+It does currently intentionally does not use external libraries such as [EasyRdf](https://github.com/easyrdf/easyrdf) to keep the required dependencies minimal. 
 
 # Authors and License
 Developed by [Leo "Leobard" Sauermann](https://www.leobard.net).
