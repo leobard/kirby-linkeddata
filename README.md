@@ -104,9 +104,19 @@ This plugin creates data that is good for Search Engine Optimization (SEO) and A
 
 [Kirby LinkedData for SEO](https://github.com/leobard/kirby-linkeddata) to maps fields from your pages (blueprints) to schema.org or any other RDF-based markup. As the mappings are part of the definitions in the blueprints, they add semantic meaning to your fields for interoperability with other systems. Like the `help` property of a field suggested by Kirby for documentation, the `rdfproperty` points to a documentation of the field based on W3C Standards. This plugin adds a mapping. Once defined, this mapping can be reused for importing data, instructing AI systems to write code for importing from external sources and do all kinds of useful things we can think of. It opens the door to hacking more features on top.
 
-## Why is this called "LinkedData"?
+## Why is this called "LinkedData" and "SEO"?
 
 "LinkedData" is a term that in itself describes what this is about: there is data published on websites, it links to more data on this or other websites. It is used by many as a more human readable synonym for what first had been published as the Resource Description Framework (RDF) and grown large by the Semantic Web initiative and community.
+
+"SEO" is in the description because webmasters currently know the term "SEO" more and want to do it. They usually don't know that they need to publish "Linked Data" to achieve it.
+
+## Do I need blueprints?
+
+Yes, to use this plugin, you need to define blueprints for your pages in `site/blueprints/pages`. 
+
+The concept of this plugin is to express mappings declaratively in the YAML text.
+
+If you use pages without blueprints, this plugin is not for you, see [this discussion on discord on 2026-09-27](https://discord.com/channels/525634039965679616/1553764086360309931/1553806628019773503).
 
 ## What is "RDF" and why do I need to for SEO with Schema.org and artificial intelligence (AI)?
 
