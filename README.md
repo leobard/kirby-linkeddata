@@ -5,14 +5,13 @@ Do you want to give search engines and AIs the data they need with minimal effor
 Kirby LinkedData for SEO is a plugin that maps fields from your pages (blueprints) to schema.org or any other RDF-based markup. 
 - It prints the data as JSON-LD block in a snippet. 
 - Search engines, AIs, and human readers can pick it up from there and use it.
-- Fields are mapped to equivalent RDF properties, blueprints to their RDF class. (🆑)
-- Use the AI skill "schema that blueprint" to get started. 
-- Complex mappings can be done in PHP code. 
+- Fields are mapped to equivalent RDF properties, blueprints to their RDF class. (*🆑 not yet, see [issue#1: Support RDF namespaces](https://github.com/leobard/kirby-linkeddata/issues/1)*)
+- Use the AI skill "[schemaorg-that-blueprint](skills/schemaorg-that-blueprint.md)" to get AI support when annotating blueprints. 
+- Complex mappings can be done in PHP code. (*👾 not yet, see [issue#2: Map structures in blueprints and sub-resources in LinkedData](https://github.com/leobard/kirby-linkeddata/issues/2) )
 
 > [!CAUTION]
 > This plugin is in an alpha state. It has not been used productively. It misses some useful features, see [issues](https://github.com/leobard/kirby-linkeddata/issues).
 
-(🆑 not yet, see [issue#1: Support RDF namespaces](https://github.com/leobard/kirby-linkeddata/issues/1))
 
 # Getting started
 
@@ -53,6 +52,8 @@ fields:
     type: tel
     rdfproperty: schema:telephone
 ```
+
+Hint: Use the AI skill "[schemaorg-that-blueprint](skills/schemaorg-that-blueprint.md)" to get AI support when annotating blueprints. 
 
 ## 3. Call the snippet from your page template
 Open your page template and call `snippet('linkeddata/forpage');`.
