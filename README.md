@@ -12,6 +12,20 @@ Kirby LinkedData for SEO is a plugin that maps fields from your pages (blueprint
 > [!CAUTION]
 > This plugin is in an alpha state. It has not been used productively. It misses some useful features, see [issues](https://github.com/leobard/kirby-linkeddata/issues).
 
+# Example
+
+Here is the JSON-LD rendered by the starterkit example for Mægazine Inc.
+
+```jsonld
+{
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "@id": "https://www.example.com/about",
+    "address": "Mægazine Inc. Sesamestreet 1 Gotham City USA",
+    "email": "mail@maegazine.com",
+    "telephone": "+49 1234 5678"
+}
+```
 
 # Getting started
 
@@ -70,20 +84,6 @@ For [the starterkit about.php template](https://github.com/getkirby/starterkit/b
 - If it is schema.org, validate it using [validator.schema.org](https://validator.schema.org/).
 - If it is RDF, see if the [easyrdf.org/converter](https://www.easyrdf.org/converter) parses it.
 
-# Example
-
-Here is the JSON-LD rendered by the starterkit example for Mægazine Inc.
-
-```jsonld
-{
-    "@context": "https://schema.org",
-    "@type": "Organization",
-    "@id": "https://www.example.com/about",
-    "address": "Mægazine Inc. Sesamestreet 1 Gotham City USA",
-    "email": "mail@maegazine.com",
-    "telephone": "+49 1234 5678"
-}
-```
 
 # Questions and Answers
 
